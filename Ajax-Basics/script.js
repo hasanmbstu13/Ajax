@@ -3,7 +3,7 @@
 	// request.open('GET','data.txt',false); -- Synchronous ajax request// first one is method //second one is location of the data file // third one is boolean value i.e we mean whether request is synchronous or not.
 	// browser comaptibility
 	var request;
-	if (window.XMLHttpRequest) { // if the browser api is the xmlhttprequest then set the rquest is the object of xmlhttprequest
+	if (window.XMLHttpRequest) { // if the browser api is the xmlhttprequest then set the request is the object of xmlhttprequest
 		request = new XMLHttpRequest();
 	} else {
 		request = new ActiveXObject("Microsoft.XMLHTTP");
