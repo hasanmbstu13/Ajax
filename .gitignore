@@ -5,6 +5,18 @@ bin-release/
 
 # Other files and folders
 .settings/
+# comment
+third_file.txt
+.DS_Store
+*.txt
+*.zip
+*.gz
+log/*.log
+log/*.log.[0-9]
+assets/photoshop/
+assets/videos/
+!assets/videos/tour_*.mp4
+
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
