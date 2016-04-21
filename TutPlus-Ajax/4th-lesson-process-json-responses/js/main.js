@@ -25,11 +25,12 @@
 				// insert it into the html body
 				var body = document.getElementsByTagName("body")[0];
 				
-				var json = xhr.responseText;
+				var json = JSON.parse(xhr.responseText);
 
-				alert(json);
+				// alert(json);
+				// console.log(json);
 
-				/*var heading		= xhr.responseXML.getElementsByTagName("heading")[0].firstChild.nodeValue;
+				var heading		= json.heading;
 				var h2 			= document.createElement("h2");
 				var h2Text		= document.createTextNode(heading);
 				h2.appendChild(h2Text);
@@ -37,11 +38,10 @@
 				var list 		= document.createElement("ul");
 
 				// This will return only the items tag but we need digging further
-				var items 		= xhr.responseXML.getElementsByTagName("items")[0];
-				items 			= items.getElementsByTagName("item");
+				var items 		= json.items;
 
-				for(var i=0; i<items.length; i++) {
-					var item 	= items[i].firstChild.nodeValue;
+				for(var key in items) {
+					var item 	= items[key];
 					var li 	 	= document.createElement("li");
 					var liText 	= document.createTextNode(item);
 					li.appendChild(liText);
@@ -54,9 +54,9 @@
 
 
 
-				body.removeChild(link);*/
+				body.removeChild(link);
 			}
-		};
+		}
 		
 		xhr.open("GET", "files/ajax.json", true);
 		// send the request

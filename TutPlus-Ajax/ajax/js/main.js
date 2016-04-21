@@ -21,9 +21,11 @@
 
 		xhr.onreadystatechange = function(){
 			if ((xhr.readyState == 4) && (xhr.status == 200 || xhr.status == 304)) {
-				xhr.responseText;
-
+				// xhr.responseText;
+				console.log(xhr.responseText);
+				
 				var body = document.getElementsByTagName("body")[0];
+				console.log(body);
 				var p = document.createElement("p");
 				var pText = document.createTextNode(xhr.responseText);
 				p.appendChild(pText);
