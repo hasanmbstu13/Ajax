@@ -3,20 +3,33 @@
 	var link = document.getElementsByTagName("a")[0];
 
 	link.onclick = function() {
+		// the argument in the ajax method
+		// first one is url & second one is object
+		// ajax('files/ajax.json', {} );
+		// Instead of using globla method we can use namespace 
+		// by placing the method into the js object
+		// This object will be global but each method inside of it would be unique that object
+		// & this will be reducing chances of overriding
 		Ajax.ajax('files/ajax.json', {
 			method 		: "GET",
+			// complete callback is ran when our ajax request is complete & ready to update the page
 			complete 	: function(response) {
 				// so now user can use this or response for grab the response
 				// This is will ran when our ajax request is complete & ready to update
 				var body = document.getElementsByTagName("body")[0];
 				
+				// We can also use this keyword to hold the rquest like this.responseText
+				// or like this.readyState or this.status or any other property
 				// responseText & response is same thing
+				// We can use this keyword here by the grace of call method
+				// We use only response to hold the data instead of using xhr.response
 				// var json = JSON.parse(xhr.response);
-
+				// This is much cleaner & easier way to grab the ajax request
 				var json = response;
 
-				alert(json);
-				// console.log(json);
+				// alert(json);
+				console.log(json);
+				console.log(resopnseAgain);
 
 				var heading		= json.heading;
 				var h2 			= document.createElement("h2");

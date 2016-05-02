@@ -27,9 +27,11 @@
 				var d = document.createElement("div");
 				body.appendChild(d);
 
-				var div = document.getElementsByTagName("div")[0];
+				var div = document.getElementsByTagName("div")[2];
 				// after get ajax response div will filled with responseText
 				div.innerHTML = xhr.responseText;
+				// console.log(div);
+				// console.log(xhr.responseText);
 
 				body.removeChild(link);
 			}

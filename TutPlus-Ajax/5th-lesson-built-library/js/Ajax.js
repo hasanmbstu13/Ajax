@@ -1,3 +1,4 @@
+// An empty object
 var Ajax = {};
 
 Ajax.createXHR = function(url, options) {

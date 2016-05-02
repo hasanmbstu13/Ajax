@@ -33,7 +33,9 @@
 
 				// This will return only the items tag but we need digging further
 				var items 		= xhr.responseXML.getElementsByTagName("items")[0];
+				console.log(items);
 				items 			= items.getElementsByTagName("item");
+				console.log(items);
 
 				for(var i=0; i<items.length; i++) {
 					var item 	= items[i].firstChild.nodeValue;
