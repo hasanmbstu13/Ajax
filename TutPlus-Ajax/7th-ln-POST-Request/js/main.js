@@ -15,7 +15,7 @@
 	var form = document.getElementsByTagName('form')[0];
 
 	form.onsubmit = function() {
-		var emailVal = document.getElementsById("email").value;
+		var emailVal = document.getElementById("email").value;
 		var url = form.getAttribute("action");
 
 		Ajax.ajax(url, {
